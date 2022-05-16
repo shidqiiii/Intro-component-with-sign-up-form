@@ -19,55 +19,79 @@ body {
   box-sizing: border-box;
 }
 
-main {
+.container {
+  min-height: 900px;
   display: flex;
-  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 1000px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 30px;
   border: 1px solid black;
   gap: 30px;
-  margin: auto;
 }
 
 .content-left {
-  flex-basis: 100%;
-}
-
-.content-right {
-  flex-basis: 100%;
+  border: 1px solid black;
+  padding: 10px;
 }
 
 button {
   width: 100%;
-  padding: 15px;
+  padding: 20px 60px;
+  margin: 10px auto;
   border-radius: 10px;
   border: none;
   color: white;
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 
   &#try-free {
     background-color: $blue;
+
+    &:hover {
+      position: relative;
+      top: 7px;
+      box-shadow: none;
+    }
   }
 
   &#claim-free {
     background-color: $green;
+    box-shadow: 0px 3px 0px 0px rgb(20, 145, 90);
+
+    &:hover {
+      position: relative;
+      top: 3px;
+      box-shadow: none;
+    }
   }
 }
 
 form {
   background-color: white;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 30px;
   text-align: center;
   color: $dark-blue;
+  border-radius: 10px;
 }
 
 input {
   width: 100%;
   margin: 10px auto;
-  padding: 10px;
+  padding: 20px;
   display: inline-block;
   box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid $Grayish-blue;
+  font-weight: 700;
 }
 
 span {
@@ -76,4 +100,20 @@ span {
 
 p {
   font-size: 16px;
+
+  &#term {
+    font-size: 12px;
+    margin: 5px 0;
+    color: $Grayish-blue;
+
+    & > span {
+      color: $red;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    flex-wrap: wrap;
+  }
 }
