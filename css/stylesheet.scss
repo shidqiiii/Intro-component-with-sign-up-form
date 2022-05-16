@@ -1,7 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 $font: "Poppins", sans-serif;
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%);
+$Grayish-blue: hsl(246, 25%, 77%);
 
 * {
   font-family: $font;
+}
+
+body {
+  background-image: url(../images/bg-intro-desktop.png);
+  background-size: cover;
+  background-color: $red;
+  color: white;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  border: 1px solid black;
+  gap: 30px;
+  margin: auto;
+}
+
+.content-left {
+  flex-basis: 100%;
+}
+
+.content-right {
+  flex-basis: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+
+  &#try-free {
+    background-color: $blue;
+  }
+
+  &#claim-free {
+    background-color: $green;
+  }
+}
+
+form {
+  background-color: white;
+  margin: 20px auto;
+  padding: 30px;
+  text-align: center;
+  color: $dark-blue;
+}
+
+input {
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+span {
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
 }
