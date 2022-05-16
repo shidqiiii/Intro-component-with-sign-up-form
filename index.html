@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
@@ -13,41 +14,61 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <main>
-        <div class="content-left">
-          <h1>
-            Learn to code by <br />
-            watching others
-          </h1>
-          <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
-        </div>
-        <div class="content-right">
-          <button id="try-free"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
-          <form action="submit">
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button id="claim-free">Claim your free trial</button>
-            <p id="term">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
-          </form>
-        </div>
-      </main>
+</head>
 
-      <footer>
-        <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://arunikaproject.netlify.app/">Arunika</a>.</p>
-      </footer>
+<body>
+    <div class="container">
+        <main>
+            <div class="content-left">
+                <h1>
+                    Learn to code by <br /> watching others
+                </h1>
+                <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+            </div>
+            <div class="content-right">
+                <button id="try-free"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
+                <form action="submit">
+                    <div class="input-form">
+                        <input id="first-name" type="text" placeholder="First Name" />
+                        <img src="/images/icon-error.svg" alt="" />
+                        <label for="firstname">Error</label>
+                    </div>
+                    <div class="input-form">
+                        <input id="last-name" type="text" placeholder="Last Name" />
+                        <img src="/images/icon-error.svg" alt="" />
+                        <label for="firstname">Error</label>
+                    </div>
+                    <div class="input-form">
+                        <input id="email" type="email" placeholder="Email Address" />
+                        <img src="/images/icon-error.svg" alt="" />
+                        <label for="firstname">Error</label>
+                    </div>
+                    <div class="input-form">
+                        <input id="password" type="password" placeholder="Password" />
+                        <img src="/images/icon-error.svg" alt="" />
+                        <label for="firstname">Error</label>
+                    </div>
+                    <button id="claim-free">Claim your free trial</button>
+                    <p id="term">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://arunikaproject.netlify.app/">Arunika</a>.</p>
+        </footer>
     </div>
-  </body>
+
+    <script src="/js/main.js"></script>
+</body>
+
 </html>

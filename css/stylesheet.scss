@@ -1,119 +1,152 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
-$font: "Poppins", sans-serif;
-$red: hsl(0, 100%, 74%);
-$green: hsl(154, 59%, 51%);
-$blue: hsl(248, 32%, 49%);
-$dark-blue: hsl(249, 10%, 26%);
-$Grayish-blue: hsl(246, 25%, 77%);
-
+$font: "Poppins",
+sans-serif;
+$red: hsl(0,
+100%,
+74%);
+$green: hsl(154,
+59%,
+51%);
+$blue: hsl(248,
+32%,
+49%);
+$dark-blue: hsl(249,
+10%,
+26%);
+$Grayish-blue: hsl(246,
+25%,
+77%);
 * {
-  font-family: $font;
+    font-family: $font;
 }
 
 body {
-  background-image: url(../images/bg-intro-desktop.png);
-  background-size: cover;
-  background-color: $red;
-  color: white;
-  box-sizing: border-box;
+    background-image: url(../images/bg-intro-desktop.png);
+    background-size: cover;
+    background-color: $red;
+    color: white;
+    box-sizing: border-box;
 }
 
 .container {
-  min-height: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
-  max-width: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  border: 1px solid black;
-  gap: 30px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid black;
+    gap: 30px;
 }
 
 .content-left {
-  border: 1px solid black;
-  padding: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    flex-basis: 100%;
+}
+
+.content-right {
+    flex-basis: 100%;
 }
 
 button {
-  width: 100%;
-  padding: 20px 60px;
-  margin: 10px auto;
-  border-radius: 10px;
-  border: none;
-  color: white;
-  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-
-  &#try-free {
-    background-color: $blue;
-
-    &:hover {
-      position: relative;
-      top: 7px;
-      box-shadow: none;
+    width: 100%;
+    padding: 20px 60px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    &#try-free {
+        background-color: $blue;
+        &:hover {
+            position: relative;
+            top: 7px;
+            box-shadow: none;
+        }
     }
-  }
-
-  &#claim-free {
-    background-color: $green;
-    box-shadow: 0px 3px 0px 0px rgb(20, 145, 90);
-
-    &:hover {
-      position: relative;
-      top: 3px;
-      box-shadow: none;
+    &#claim-free {
+        background-color: $green;
+        box-shadow: 0px 3px 0px 0px rgb(20, 145, 90);
+        &:hover {
+            position: relative;
+            top: 3px;
+            box-shadow: none;
+        }
     }
-  }
 }
 
 form {
-  background-color: white;
-  margin: 10px auto;
-  padding: 30px;
-  text-align: center;
-  color: $dark-blue;
-  border-radius: 10px;
+    background-color: white;
+    margin: 10px auto;
+    padding: 30px;
+    text-align: center;
+    color: $dark-blue;
+    border-radius: 10px;
 }
 
 input {
-  width: 100%;
-  margin: 10px auto;
-  padding: 20px;
-  display: inline-block;
-  box-sizing: border-box;
-  border-radius: 6px;
-  border: 1px solid $Grayish-blue;
-  font-weight: 700;
+    width: 100%;
+    margin: 5px auto;
+    padding: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid $Grayish-blue;
+    font-weight: 700;
+    &.error {
+        border: 1px solid $red;
+    }
 }
 
 span {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 p {
-  font-size: 16px;
-
-  &#term {
-    font-size: 12px;
-    margin: 5px 0;
-    color: $Grayish-blue;
-
-    & > span {
-      color: $red;
+    font-size: 16px;
+    &#term {
+        font-size: 12px;
+        margin: 5px 0;
+        color: $Grayish-blue;
+        &>span {
+            color: $red;
+        }
     }
-  }
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    text-align: end;
+    font-style: italic;
+    color: $red;
+    padding: 0 10px;
+    visibility: hidden;
+}
+
+.input-form {
+    position: relative;
+}
+
+img {
+    position: absolute;
+    top: 24px;
+    right: 15px;
+    visibility: hidden;
 }
 
 @media only screen and (max-width: 768px) {
-  main {
-    flex-wrap: wrap;
-  }
+    main {
+        flex-wrap: wrap;
+        text-align: center;
+    }
 }
