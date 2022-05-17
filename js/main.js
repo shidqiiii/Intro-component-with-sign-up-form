@@ -21,11 +21,23 @@ form.addEventListener('submit', function(e) {
     } else {
         lastName.parentElement.classList.remove("error")
     }
+
+    if (email.value === "") {
+        setError(email, "Email cannot be empty")
+    } else if (!checkEmail(email.value)) {
+        setError(email, "Email is not valid")
+    } else {
+        email.parentElement.classList.remove("error")
+    }
+
+    if (password.value === "") {
+        setError(password, "Password cannot be empty")
+    } else if (password.value.length < 8) {
+        setError(password, "Password length must be atleast 8 characters")
+    } else {
+        password.parentElement.classList.remove("error")
+    }
 })
-
-function checkInput() {
-
-}
 
 function setError(input, message) {
     const formInput = input.parentElement;
@@ -34,4 +46,9 @@ function setError(input, message) {
     label.innerText = message;
 
     formInput.classList.add("error");
+}
+
+function checkEmail(emails) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(emails);
 }
